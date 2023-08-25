@@ -25,13 +25,24 @@ func main() {
 	//fmt.Println("Image path: ", body.ImagePath)
 	//fmt.Println("Actions: ", body.Actions)
 
-	MarshalJSON(&body)
+	MarshalJSONIndent(&body)
 
 }
 
 func MarshalJSON(obj *Body) {
 
 	decodedBytes, err := json.Marshal(obj)
+
+	if err != nil {
+		return
+	}
+
+	fmt.Printf("%+v", string(decodedBytes))
+}
+
+func MarshalJSONIndent(obj *Body) {
+
+	decodedBytes, err := json.MarshalIndent(obj, "", "		")
 
 	if err != nil {
 		return
