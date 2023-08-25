@@ -23,7 +23,7 @@ func main() {
 			fmt.Println("Error in fetching data")
 		}
 
-		go handleResponse(r)
+		go handleResponse(r) // lightweight threads to manage response handing
 	}
 
 }
