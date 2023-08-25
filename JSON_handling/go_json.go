@@ -16,6 +16,7 @@ func main() {
 
 	body := Body{}
 
+	// converting raw json to struct object
 	err := json.Unmarshal([]byte(payload), &body)
 
 	if err != nil {
@@ -31,6 +32,7 @@ func main() {
 
 func MarshalJSON(obj *Body) {
 
+	// converting struct object to raw json
 	decodedBytes, err := json.Marshal(obj)
 
 	if err != nil {
@@ -42,6 +44,7 @@ func MarshalJSON(obj *Body) {
 
 func MarshalJSONIndent(obj *Body) {
 
+	// converting struct object to raw json with indentation
 	decodedBytes, err := json.MarshalIndent(obj, "", "	")
 
 	if err != nil {
