@@ -42,7 +42,7 @@ func MarshalJSON(obj *Body) {
 
 func MarshalJSONIndent(obj *Body) {
 
-	decodedBytes, err := json.MarshalIndent(obj, "", "		")
+	decodedBytes, err := json.MarshalIndent(obj, "", "	")
 
 	if err != nil {
 		return
