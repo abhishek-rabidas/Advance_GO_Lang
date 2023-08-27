@@ -1,1 +1,5 @@
-package Decoding
+package main
+
+func main() {
+
+}
