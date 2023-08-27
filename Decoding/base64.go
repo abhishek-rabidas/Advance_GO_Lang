@@ -10,4 +10,7 @@ func main() {
 
 	decodedStr, _ := base64.StdEncoding.DecodeString(encodedHash)
 	fmt.Println("Decoded string: ", string(decodedStr))
+
+	decodedStr, _ = base64.URLEncoding.DecodeString(encodedHash)
+	fmt.Println("Decoded string: ", string(decodedStr))
 }
