@@ -15,6 +15,9 @@ func main() {
 	}
 
 	encodedString := base64.StdEncoding.EncodeToString([]byte(data))
+	fmt.Println("Encoded string: ", encodedString)
 
+	// URL compatible encoding
+	encodedString = base64.URLEncoding.EncodeToString([]byte(data))
 	fmt.Println("Encoded string: ", encodedString)
 }
