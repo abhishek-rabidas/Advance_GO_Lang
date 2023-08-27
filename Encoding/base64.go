@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"encoding/base64"
+	"fmt"
+)
 
 func main() {
 
@@ -11,4 +14,7 @@ func main() {
 		panic(err)
 	}
 
+	encodedString := base64.StdEncoding.EncodeToString([]byte(data))
+
+	fmt.Println("Encoded string: ", encodedString)
 }
