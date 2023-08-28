@@ -14,4 +14,6 @@ func main() {
 	bs := encoder.Sum(nil)
 
 	fmt.Println("Encoded String: ", bs)
+	fmt.Printf("%x\n", bs)
+
 }
