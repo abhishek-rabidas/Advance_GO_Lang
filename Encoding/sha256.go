@@ -28,6 +28,7 @@ func main() {
 	}
 }
 
+// another way of SHA256 encoding
 func directSHA256Encoding() {
 	input := "Hello, world!"
 	hash := sha256.Sum256([]byte(input))
