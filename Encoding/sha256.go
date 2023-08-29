@@ -2,6 +2,7 @@ package main
 
 import (
 	"crypto/sha256"
+	"encoding/hex"
 	"fmt"
 )
 
@@ -17,5 +18,12 @@ func main() {
 	fmt.Printf("%x\n", bs)
 
 	//compare hash
+	hash := "bc7e8a24e2911a5827c9b33d618531ef094937f2b3803a591c625d0ede1fffc6"
+	hexString := hex.EncodeToString(bs)
 
+	if hexString == hash {
+		fmt.Println("Hashes are matching")
+	} else {
+		fmt.Println("Hashes are not matching")
+	}
 }
