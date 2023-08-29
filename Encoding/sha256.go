@@ -16,4 +16,6 @@ func main() {
 	fmt.Println("Encoded String: ", bs)
 	fmt.Printf("%x\n", bs)
 
+	//compare hash
+
 }
