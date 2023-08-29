@@ -27,3 +27,11 @@ func main() {
 		fmt.Println("Hashes are not matching")
 	}
 }
+
+func directSHA256Encoding() {
+	input := "Hello, world!"
+	hash := sha256.Sum256([]byte(input))
+
+	hashString := hex.EncodeToString(hash[:])
+	fmt.Println("SHA-256 Hash:", hashString)
+}
