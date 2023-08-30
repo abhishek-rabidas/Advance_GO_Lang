@@ -18,6 +18,11 @@ func reverseString() {
 	fmt.Println("Reversed string: ", string(runes))
 }
 
+/*
+Benchmark tests typically go in _test.go files and are named beginning with Benchmark. The testing runner executes each
+benchmark function several times, increasing b.N on each run until it collects a precise measurement.
+*/
+
 func BenchmarkRevString(t *testing.B) {
 
 	for i := 0; i < t.N; i++ {
